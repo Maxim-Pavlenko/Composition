@@ -28,7 +28,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     private var timer: CountDownTimer? = null
 
     private val _formattedTime = MutableLiveData<String>()
-    private val formattedTime: LiveData<String>
+    val formattedTime: LiveData<String>
         get() = _formattedTime
 
     private val _question = MutableLiveData<Question>()
@@ -36,19 +36,19 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         get() = _question
 
     private val _percentOfRightAnswers = MutableLiveData<Int>()
-    private val percentOfRightAnswers: LiveData<Int>
+    val percentOfRightAnswers: LiveData<Int>
         get() = _percentOfRightAnswers
 
     private val _progressAnswers = MutableLiveData<String>()
-    private val progressAnswers: LiveData<String>
+    val progressAnswers: LiveData<String>
         get() = _progressAnswers
 
     private val _enoughtCount = MutableLiveData<Boolean>()
-    private val enoughtCount: LiveData<Boolean>
+    val enoughtCount: LiveData<Boolean>
         get() = _enoughtCount
 
     private val _enoughtPercent = MutableLiveData<Boolean>()
-    private val enoughtPercent: LiveData<Boolean>
+    val enoughtPercent: LiveData<Boolean>
         get() = _enoughtPercent
 
     private val _minPercent = MutableLiveData<Int>()
